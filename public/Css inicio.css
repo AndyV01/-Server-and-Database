@@ -275,15 +275,20 @@ h3 {
 #button {
   padding: 3px 55px;
   margin-bottom: 15px;
+  margin-top: 10px;
   height: 80%;
   width: 200px;
   border-radius: 20px;
   font-family: "Staatliches", cursive;
 }
+form {
+  display: grid;
+  justify-items: center;
+}
 .input {
   margin: 3px;
   padding: 3px 10px;
-  height: 80%;
+  height: 90%;
   width: 200px;
   border-radius: 20px;
 }

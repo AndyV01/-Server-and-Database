@@ -79,3 +79,5 @@ const listOfLink = [
 listOfLink.map(function(linkList) {
     createNewLink(linkList)
 })
+
+module.exports = listOfLink 

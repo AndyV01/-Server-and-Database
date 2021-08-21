@@ -136,3 +136,5 @@ function createNewCard (newProduct) {
      listOfProducts.map(function(productList) {
          createNewCard(productList);
      })
+
+     module.exports = listOfProducts

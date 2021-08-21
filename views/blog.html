@@ -19,9 +19,9 @@
         <img class="logo" src="./pics/Logo fondo transparente[617].png" alt="Logo Kush">
         <nav>
             <ul>
-                <li> <a class="nav-button" href="../inicio/home.html">INICIO</a></li>
-                <li> <a class="nav-button" href="../Blog/blog.html">BLOG</a></li>
-                <li> <a class="nav-button" href="../Catalogo/Catalogo.html">CATALOGO</a></li>
+                <li> <a class="nav-button" href="./">INICIO</a></li>
+                <li> <a class="nav-button" href="./blog">BLOG</a></li>
+                <li> <a class="nav-button" href="./catalogo">CATALOGO</a></li>
                 <li> <a class="nav-button" href="Parafernalia">FORO</a></li>
                 <li> <a class="nav-button" href="Contactos">CONTACTOS</a></li>
             </ul>
@@ -150,11 +150,21 @@
         </div>
         <div>
             <h3>SUSCRIPCION</h3>
-            <input class="input" type="text" placeholder="mail">
-            <label>
-                <input type="checkbox">Si continuas, aceptas la politica de privacidad.
-            </label>
-            <button id="button">Enviar</button>
+            <form method="POST" action="http://localhost:4000/suscripto_ok">
+                <input 
+                 class="input" 
+                 required="true" 
+                 type="text"
+                 name="name"
+                 placeholder="name">
+                 <input 
+                 class="input" 
+                 required="true" 
+                 type="email"
+                 name="email"
+                 placeholder="mail">
+                <button id="button">Enviar</button>
+            </form>  
             <center><a href="https://www.facebook.com/usuario " target="_blank" class="fa fa-facebook-square"></a>
                 <a href="https://twitter.com/usuario" target="_blank" class="fa fa-twitter-square"></a>
                 <a href="https://plus.google.com/usuario" target="_blank" class="fa fa-google-plus-square"></a>
@@ -163,7 +173,7 @@
             <p>© Copyright 2021 - kushTeen.uy - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </footer>
-    <script src="./JavaBlog.js"></script>
+    <script src="/JavaBlog.js"></script>
 </body>
 
 </html>

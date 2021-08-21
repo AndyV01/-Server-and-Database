@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 150vh;
+    display: grid;
+    grid-template-columns: 3fr 1f;
+    grid-template-rows: 2fr 6fr 3fr;
+    gap: 10px 10px;
+    background-color: black;
+  }
+  .stars {
+    background: #000
+      url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+      center;
+    z-index: 0;
+  }
+  header {
+    display: grid;
+    grid-column: span 2;
+    grid-row: 1;
+    justify-items: center;
+    align-items: center;
+  }
+  p {
+    font-size: 20px;
+    font-family: "Questrial", sans-serif;
+    color: white;
+    margin: 30px 0px;
+  }
+  div {
+    display: grid;
+    justify-items: center;
+    margin: 0px 15px;
+    align-content: center;
+  }
+
+  img {
+    height: 200px;
+    margin-top: 20px;
+  }
+  .nav-button {
+    background-color: rgba(127, 255, 212, 0.226);
+    border-radius: 5px;
+    color: white;
+    text-decoration: transparent;
+  }
+  nav a:hover {
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+  }
+  
+  nav > ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
+  }
+  button:hover {
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad,
+      0 0 200px #ff96ad;
+  }
+  
+  nav {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px 0;
+  }
+  #user {
+    position: fixed;
+    bottom: 410px;
+    right: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+  #add {
+    position: fixed;
+    bottom: 270px;
+    right: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+  #wapp {
+    position: fixed;
+    bottom: 340px;
+    right: 50px;
+    height: 45px;
+    z-index: 1;
+  }
+  
+  
+  main {
+    display: grid;
+    grid-column: span 2;
+    grid-row: 2;
+    background-color: rgba(252, 48, 208, 0.178);
+    border-radius: 20px;
+    align-items: center;
+    justify-items: center;
+    
+  }
+  
+  section{
+      display: grid;
+      justify-items: center;
+  
+  }
+  
+  section img {
+    height: 10vw;  
+    border-radius: 20px;
+    margin: 40px;
+
+  }
+ section h1 {
+    color: #ffffff;
+    text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0,
+      0 0 6px #2cd0f0, 0 0 20px #2cd0f0, 0 0 20px #2cd0f0, 0 0 1px #2cd0f0,
+      0 0 12px #2cd0f0;
+    font-size: 40px;
+    margin-top: 40px;
+}
+  footer {
+    display: grid;
+    grid-column: span 2;
+    grid-row: 3;
+    background-color: rgba(250, 79, 241, 0.123);
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+  }
+  footer img {
+    height: 100px;
+    opacity: 100%;
+    margin-top: 10px;
+  }
+  div > p {
+    font-family: "Staatliches", cursive;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  h3 {
+    border-bottom: 1px solid white;
+    color: rgb(182, 170, 170);
+    margin-bottom: 15px;
+  }
+  #button {
+    padding: 3px 55px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    height: 80%;
+    width: 200px;
+    border-radius: 20px;
+    font-family: "Staatliches", cursive;
+  }
+  form {
+    display: grid;
+    justify-items: center;
+  }
+  .input {
+    margin: 3px;
+    padding: 3px 10px;
+    height: 90%;
+    width: 200px;
+    border-radius: 20px;
+  }
+  label {
+    margin-bottom: 10px;
+  }
+  center {
+    margin-bottom: 15px;
+  }
+  ul {
+    list-style-type: none;
+    display: list-item;
+  }
+  li {
+    margin: 5px 0;
+    padding: 2px 0;
+  }
+  li:hover {
+    transition-property: transform;
+    transform: translateX(15px);
+    transition-duration: 300ms;
+  }
+  footer a {
+    color: white;
+    text-decoration: transparent;
+    justify-items: center;
+    text-align: center;
+    transition-property: transform;
+    transform: translateX(10px);
+    transition-duration: 300ms;
+  }
+  footer a:hover {
+    color: rgb(247, 108, 247);
+  }
+  /* Source code of the footer social icons*/
+  .fa-facebook-square:hover {
+    color: #3b5998;
+  }
+  .fa-twitter-square:hover {
+    color: #55acee;
+  }
+  .fa-google-plus-square:hover {
+    color: #dd4b39;
+  }
+  .fa-linkedin-square:hover {
+    color: #0177b5;
+  }
+  .fa-facebook-square {
+    font-size: 172px;
+    color: gray;
+  }
+  .fa-twitter-square {
+    font-size: 172px;
+    color: gray;
+  }
+  .fa-google-plus-square {
+    font-size: 172px;
+    color: gray;
+  }
+  .fa-linkedin-square {
+    font-size: 172px;
+    color: gray;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+    }
+    header {
+      grid-column: span 1;
+      grid-row: 1;
+      height: 40vh;
+    }
+    .logo {
+      margin-bottom: 10px;
+    }   
+    section {
+        grid-template-columns: 1fr;
+    }
+    
+    
+    section img {
+      margin: 5px;
+    }
+
+
+
+    footer {
+      grid-row: 3;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    .secondary {
+      display: none;
+    }
+    } 

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUSCRIPCION</title>
-    <link rel="stylesheet" href="./css suscripto.css">
+    <title>PRODUCTOS</title>
+    <link rel="stylesheet" href="/style/product.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,29 +20,48 @@
 
 <body class="stars">
     <header>
-        <img class="logo" src="./pics/Logo fondo transparente[617].png" alt="Logo Kush">
+        <img class="logo" src="/pics/Logo fondo transparente[617].png" alt="Logo Kush">
         <nav>
             <ul>
-                <li> <a class="nav-button" href="./">INICIO</a> </li>
-                <li> <a class="nav-button" href="./blog">BLOG</a></li>
-                <li> <a class="nav-button" href="./catalogo">CATALOGO</a></li>
+                <li> <a class="nav-button" href="/">INICIO</a> </li>
+                <li> <a class="nav-button" href="/blog">BLOG</a></li>
+                <li> <a class="nav-button" href="/catalogo">CATALOGO</a></li>
                 <li> <a class="nav-button" href="Foro">FORO</a></li>
                 <li> <a class="nav-button" href="Contactos">CONTACTOS</a></li>
             </ul>
         </nav>
     </header>
-    <a href="user.com"><img id="user" src="./pics/villain.png" alt="user"> </a>
-    <a href="https://web.whatsapp.com/"><img id="wapp" src="./pics/whatsapp.png" alt="whatsapp"></a>
-    <a href="add.com"> <img id="add" src="./pics/carrito-de-compras.png" alt="add"></a>
+    <a href="user.com"><img id="user" src="/pics/villain.png" alt="user"> </a>
+    <a href="https://web.whatsapp.com/"><img id="wapp" src="/pics/whatsapp.png" alt="whatsapp"></a>
+    <a href="add.com"> <img id="add" src="/pics/carrito-de-compras.png" alt="add"></a>
     <main>
         <section>
-          
-            
-
+            <div>
+                <img src="<%= image %>" alt="product">
+            </div>
+            <div >
+                <h1><%= name %></h1>
+                <p><%= description %></p>
+                <div class="description">
+                    <label>
+                        <input type="checkbox">
+                        Pack 3 Semillas $1500
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Pack 6 Semillas $2800
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Pack 9 Semillas $4100
+                    </label>
+                    <button>COMPRAR</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <div><img src="./pics/Logo fondo transparente[617].png" alt="Logo Kush">
+        <div><img src="/pics/Logo fondo transparente[617].png" alt="Logo Kush">
             <p>
                 Basándose en la transmisión de los valores en los que se apoya la comunidad alternativa que existe en
                 Humboldt, valores como la cooperación, la igualdad, el respeto hacia el medio ambiente, el respeto a la
@@ -94,11 +113,11 @@
         </div>
         <div>
             <h3>SUSCRIPCION</h3>
-            <input class="input" type="text" placeholder="mail">
-            <label>
-                <input type="checkbox">Si continuas, aceptas la politica de privacidad.
-            </label>
-            <button id="button">Enviar</button>
+            <form method="POST" action="http://localhost:4000/suscribe">
+                <input class="input" required="true" type="text" name="name" placeholder="name">
+                <input class="input" required="true" type="email" name="email" placeholder="mail">
+                <button id="button">Enviar</button>
+            </form>
             <center><a href="https://www.facebook.com/usuario " target="_blank" class="fa fa-facebook-square"></a>
                 <a href="https://twitter.com/usuario" target="_blank" class="fa fa-twitter-square"></a>
                 <a href="https://plus.google.com/usuario" target="_blank" class="fa fa-google-plus-square"></a>
@@ -106,13 +125,6 @@
             </center>
             <p>© Copyright 2021 - kushTeen.uy - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
-
-
-
-
-
-
-
     </footer>
 </body>
 

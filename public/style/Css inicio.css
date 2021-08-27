@@ -157,23 +157,23 @@ height: 150vh;
 }
 
 .card__front1 {
-  background-image: url(./pics/FOTO-4_web.jpg);
+  background-image: url(/pics/FOTO-4_web.jpg);
   background-size: cover;
   background-position: center;
 }
 .card__front2 {
-  background-image: url(./pics/17631.jpg);
+  background-image: url(/pics/17631.jpg);
   background-size: cover;
   background-position: center;
 }
 .card__front3 {
-  background-image: url(./pics/descarga.jfif );
+  background-image: url(/pics/descarga.jfif );
   background-size: cover;
   background-position: center;
 }
 .card__back {
   transform: rotateY(180deg);
-  background-image: url(./pics/13834732743_002376e2bf_b.jpg);
+  background-image: url(/pics/13834732743_002376e2bf_b.jpg);
   background-position: center;
   background-size: cover;
  

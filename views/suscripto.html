@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUSCRIPCION</title>
-    <link rel="stylesheet" href="./css suscripto.css">
+    <link rel="stylesheet" href="./style/css suscripto.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,9 +37,11 @@
     <main>
         <section>
           
-            <h1>SUSCRIPTO___CORRECTAMENTE</h1>
-            <img src="./pics/comprobado.png" alt="comprobado">
-
+             <h1>SUSCRIPTO___CORRECTAMENTE</h1>
+             <div>
+                 <img src="./pics/cogollo solo.png" alt="cogollo">
+                 <img src="./pics/comprobado.png" alt="comprobado">
+             </div>
         </section>
     </main>
     <footer>
@@ -95,14 +97,14 @@
         </div>
         <div>
             <h3>SUSCRIPCION</h3>
-            <form method="POST" action="http://localhost:4000/suscripto_ok">
+            <form method="POST" action="http://localhost:4000/suscribe">
                 <input 
                  class="input" 
                  required="true" 
                  type="text"
                  name="name"
                  placeholder="name">
-                 <input 
+                <input 
                  class="input" 
                  required="true" 
                  type="email"

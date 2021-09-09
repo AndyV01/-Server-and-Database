@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS</title>
-    <link rel="stylesheet" href="/style/product.css">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="/style/css Blog.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="stars">
@@ -23,49 +19,52 @@
         <img class="logo" src="/pics/Logo fondo transparente[617].png" alt="Logo Kush">
         <nav>
             <ul>
-                <li> <a class="nav-button" href="/">INICIO</a> </li>
+                <li> <a class="nav-button" href="/">INICIO</a></li>
                 <li> <a class="nav-button" href="/blog">BLOG</a></li>
                 <li> <a class="nav-button" href="/catalogo">CATALOGO</a></li>
-                <li> <a class="nav-button" href="Foro">FORO</a></li>
+                <li> <a class="nav-button" href="Parafernalia">FORO</a></li>
                 <li> <a class="nav-button" href="Contactos">CONTACTOS</a></li>
             </ul>
         </nav>
     </header>
     <span>
-        <img id="user" src="/pics/villain.png" alt="user"> 
-        <form id="login" action="/login" method="POST">
-            <input class="input" type="email" name="email" placeholder="mail">
-            <input class="input" type="password" name="password" placeholder="password">
-            <button class="button-login">Iniciar secion</button>
-        </form>
-        </span>
+    <img id="user" src="/pics/villain.png" alt="user"> 
+    <form id="login" action="/login" method="POST">
+        <input class="input" type="email" name="email" placeholder="mail">
+        <input class="input" type="password" name="password" placeholder="password">
+        <button class="button-login">Iniciar secion</button>
+    </form>
+    </span>
     <a href="https://web.whatsapp.com/"><img id="wapp" src="/pics/whatsapp.png" alt="whatsapp"></a>
     <a href="add.com"> <img id="add" src="/pics/carrito-de-compras.png" alt="add"></a>
     <main>
         <section>
-            <div>
-                <img src="<%= image %>" alt="product">
-            </div>
-            <div >
-                <h1><%= name %></h1>
-                <p><%= description %></p>
-                <div class="description">
-                    <label>
-                        <input type="checkbox">
-                        Pack 3 Semillas $1500
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        Pack 6 Semillas $2800
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        Pack 9 Semillas $4100
-                    </label>
-                    <button>COMPRAR</button>
+            <h1><%= name %></h1>
+            <img class="baner" src="<%= pic %>" alt="product">
+            <p><%= description %></P>
+            <img  src="/pics/baner 2.jpg" alt="">
+
+        </section>
+        <aside>
+        </aside>
+        <article>
+            <h1 class="neon">__________________________________________ N O V E D A D E S
+                __________________________________________ </h1>
+            <div class="carrousel-3d">
+                <div class="container-carrousel">
+                    <figure><img src="/pics/img1.jpg" alt=""></figure>
+                    <figure><img src="/pics/img2.png" alt=""></figure>
+                    <figure><img src="/pics/img3.png" alt=""></figure>
+                    <figure><img src="/pics/img4.png" alt=""></figure>
+                    <figure><img src="/pics/img5.png" alt=""></figure>
+                    <figure><img src="/pics/img6.png" alt=""></figure>
+                    <figure><img src="/pics/img7.png" alt=""></figure>
+                    <figure><img src="/pics/img8.png" alt=""></figure>
+                    <figure><img src="/pics/img9.png" alt=""></figure>
+
                 </div>
             </div>
-        </section>
+        </article>
     </main>
     <footer>
         <div><img src="/pics/Logo fondo transparente[617].png" alt="Logo Kush">
@@ -134,6 +133,7 @@
             <p>© Copyright 2021 - kushTeen.uy - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </footer>
+    <script src="/JavaBlog.js"></script>
 </body>
 
 </html>

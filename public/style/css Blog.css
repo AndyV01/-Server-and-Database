@@ -39,7 +39,6 @@ div {
 }
 img {
   height: 200px;
-  opacity: 90%;
   margin-top: 20px;
 }
 .nav-button {
@@ -47,6 +46,10 @@ img {
   border-radius: 5px;
   color: white;
   text-decoration: transparent;
+}
+.baner {
+  height: 50vh;
+  margin-top: 20px;
 }
 
 nav > ul {
@@ -74,13 +77,39 @@ aside a {
 aside a:hover {
   color: white;
 }
+#login {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: 0% 0%;
+  transition: all 0.35s;
+  position: fixed;
+  bottom: 410px;
+  right: 110px;
+  height: 50px;
+  z-index: 2;
+ 
+}
+span:hover > #login {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.button-login {
+  margin-top: 7px;
+  border-radius: 10px;
+  width: 130px;
+}
 
 #user {
+  cursor: pointer;
   position: fixed;
   bottom: 410px;
   right: 50px;
   height: 50px;
   z-index: 2;
+
 }
 #add {
   position: fixed;
@@ -102,7 +131,7 @@ main {
   grid-row: 2;
   background-color: rgba(252, 48, 208, 0.178);
   border-radius: 20px;
-  height: 430vh;
+  height: 320vh;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 3fr 2fr;
 }
@@ -116,7 +145,7 @@ section {
 }
 section > img {
   width: 90%;
-  opacity: 60%;
+  
   border-radius: 20px;
 }
 h1 {
@@ -127,7 +156,7 @@ h1 {
 aside {
   grid-column: 2;
   grid-row: 1;
-  margin-top: 130px;
+  margin-top: 50px;
 
 
 }
@@ -152,16 +181,17 @@ article {
   grid-row: 2;
   text-align: center;
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 /* carrousel  main */
 .carrousel-3d {
   width: 15vw;
+  height: 15vh;
   margin: auto;
   perspective: 1500px;
   position: relative;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 .container-carrousel {
   width: 100%;
@@ -250,7 +280,7 @@ div > p {
 h3 {
   border-bottom: 1px solid white;
   color: rgb(182, 170, 170);
-  margin-bottom: 15px;
+  margin: 15px 0px;
 }
 #button {
   padding: 3px 55px;
@@ -337,21 +367,20 @@ button:hover {
   font-size: 172px;
   color: gray;
 }
-@media (max-width: 770px) {
+@media (max-width: 950px) {
   main {
-    height: 530vh;
+    height: 320vh;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 2fr 1fr;
   
+  }
+  article {
+    display: none;
   }
 
   aside {
     grid-column: 1;
     grid-row: 2;
-  }
-  article {
-    grid-row: 3;
-    margin-top: 0;
   }
 }
 
@@ -373,11 +402,8 @@ button:hover {
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
     grid-row: 2;
-    height: 430vh;
+    height: 350vh;
     align-items: center;
-  }
-  article {
-    display: none;
   }
   aside {
 

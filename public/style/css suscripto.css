@@ -71,12 +71,39 @@ nav {
   align-items: center;
   margin-top: 10px 0;
 }
+#login {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: 0% 0%;
+  transition: all 0.35s;
+  position: fixed;
+  bottom: 410px;
+  right: 110px;
+  height: 50px;
+  z-index: 2;
+ 
+}
+span:hover > #login {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.button-login {
+  margin-top: 7px;
+  border-radius: 10px;
+  width: 130px;
+}
+
 #user {
+  cursor: pointer;
   position: fixed;
   bottom: 410px;
   right: 50px;
   height: 50px;
-  z-index: 1;
+  z-index: 2;
+
 }
 #add {
   position: fixed;
@@ -145,7 +172,7 @@ div > p {
 h3 {
   border-bottom: 1px solid white;
   color: rgb(182, 170, 170);
-  margin-bottom: 15px;
+  margin: 15px 0px;
 }
 #button {
   padding: 3px 55px;

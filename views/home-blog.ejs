@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALOGO</title>
-    <link rel="stylesheet" href="./style/Css Catalogo.css">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="./style/css Blog.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="stars">
@@ -23,23 +19,63 @@
         <img class="logo" src="./pics/Logo fondo transparente[617].png" alt="Logo Kush">
         <nav>
             <ul>
-                <li> <a class="nav-button" href="./">INICIO</a> </li>
+                <li> <a class="nav-button" href="./">INICIO</a></li>
                 <li> <a class="nav-button" href="./blog">BLOG</a></li>
                 <li> <a class="nav-button" href="./catalogo">CATALOGO</a></li>
-                <li> <a class="nav-button" href="Foro">FORO</a></li>
+                <li> <a class="nav-button" href="Parafernalia">FORO</a></li>
                 <li> <a class="nav-button" href="Contactos">CONTACTOS</a></li>
             </ul>
         </nav>
     </header>
-    <a href="user.com"><img  id="user" src="./pics/villain.png" alt="user"> </a>
-    <a  href="https://web.whatsapp.com/"><img id="wapp" src="./pics/whatsapp.png" alt="whatsapp"></a> 
+    <span>
+        <img id="user" src="/pics/villain.png" alt="user"> 
+        <form id="login" action="/login" method="POST">
+            <input class="input" type="email" name="email" placeholder="mail">
+            <input class="input" type="password" name="password" placeholder="password">
+            <button class="button-login">Iniciar secion</button>
+        </form>
+        </span>
+    <a href="https://web.whatsapp.com/"><img id="wapp" src="./pics/whatsapp.png" alt="whatsapp"></a>
     <a href="add.com"> <img id="add" src="./pics/carrito-de-compras.png" alt="add"></a>
     <main>
         <section>
-            <h1 class="neon">__________________________________________ SEMILLAS FEMINIZADAS
-                __________________________________________</h1>
-            <Div id="product_container"></Div>
+            
+            
+            <img src="./pics/medical-recreational-cover.jpg" alt="">
+            
+            
+            <img src="./pics/baner.jpg" alt="">
+            
+            <img src="./pics/baner 2.jpg" alt="">
+            <h1>100 MANERAS DE COLOCARSE</h1>
+            <p>Una mujer se lanzó a la búsqueda de explorar formas alucinantes de consumir marihuana y las fue
+                alcanzando, hasta que demostró 100 de ellas.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SAgrhc9CFno"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </section>
+        <aside>
+        </aside>
+        <article>
+            <h1 class="neon">__________________________________________ N O V E D A D E S
+                __________________________________________ </h1>
+            <div class="carrousel-3d">
+                <div class="container-carrousel">
+                    <figure><img src="./pics/img1.jpg" alt=""></figure>
+                    <figure><img src="./pics/img2.png" alt=""></figure>
+                    <figure><img src="./pics/img3.png" alt=""></figure>
+                    <figure><img src="./pics/img4.png" alt=""></figure>
+                    <figure><img src="./pics/img5.png" alt=""></figure>
+                    <figure><img src="./pics/img6.png" alt=""></figure>
+                    <figure><img src="./pics/img7.png" alt=""></figure>
+                    <figure><img src="./pics/img8.png" alt=""></figure>
+                    <figure><img src="./pics/img9.png" alt=""></figure>
+
+                </div>
+            </div>
+        </article>
     </main>
     <footer>
         <div><img src="./pics/Logo fondo transparente[617].png" alt="Logo Kush">
@@ -95,20 +131,11 @@
         <div>
             <h3>SUSCRIPCION</h3>
             <form method="POST" action="http://localhost:4000/suscribe">
-                <input 
-                 class="input" 
-                 required="true" 
-                 type="text"
-                 name="name"
-                 placeholder="name">
-                 <input 
-                 class="input" 
-                 required="true" 
-                 type="email"
-                 name="email"
-                 placeholder="mail">
+                <input class="input" required="true" type="text" name="name" placeholder="name">
+                <input class="input" required="true" type="email" name="email" placeholder="mail">
+                <input class="input" required="true" type="password" name="password" placeholder="password">
                 <button id="button">Enviar</button>
-            </form>  
+            </form>
             <center><a href="https://www.facebook.com/usuario " target="_blank" class="fa fa-facebook-square"></a>
                 <a href="https://twitter.com/usuario" target="_blank" class="fa fa-twitter-square"></a>
                 <a href="https://plus.google.com/usuario" target="_blank" class="fa fa-google-plus-square"></a>
@@ -116,9 +143,8 @@
             </center>
             <p>© Copyright 2021 - kushTeen.uy - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
-    
     </footer>
-    <script src="./Catalogo.js"></script>
+    <script src="/JavaBlog.js"></script>
 </body>
 
 </html>

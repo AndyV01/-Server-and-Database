@@ -31,7 +31,14 @@
         </div>
         <img id="baner" src="./pics/led-para-marihuana.jpg" alt="baner">
     </header>
-    <a href="user.com"><img id="user" src="./pics/villain.png" alt="user"> </a>
+    <span>
+        <img id="user" src="/pics/villain.png" alt="user"> 
+        <form id="login" action="/login" method="POST">
+            <input class="input" type="email" name="email" placeholder="mail">
+            <input class="input" type="password" name="password" placeholder="password">
+            <button class="button-login">Iniciar secion</button>
+        </form>
+        </span>
     <a href="https://web.whatsapp.com/"><img id="wapp" src="./pics/whatsapp.png" alt="whatsapp"></a>
     <a href="add.com"> <img id="add" src="./pics/carrito-de-compras.png" alt="add"></a>
     <main>
@@ -149,6 +156,7 @@
             <form method="POST" action="http://localhost:4000/suscribe">
                 <input class="input" required="true" type="text" name="name" placeholder="name">
                 <input class="input" required="true" type="email" name="email" placeholder="mail">
+                <input class="input" required="true" type="password" name="password" placeholder="password">
                 <button id="button">Enviar</button>
             </form>
 

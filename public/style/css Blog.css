@@ -131,7 +131,7 @@ main {
   grid-row: 2;
   background-color: rgba(252, 48, 208, 0.178);
   border-radius: 20px;
-  height: 320vh;
+  
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 3fr 2fr;
 }
@@ -145,8 +145,8 @@ section {
 }
 section > img {
   width: 90%;
-  
   border-radius: 20px;
+  height: 250px;
 }
 h1 {
   color: white;
@@ -369,7 +369,7 @@ button:hover {
 }
 @media (max-width: 950px) {
   main {
-    height: 320vh;
+    height: 330vh;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 2fr 1fr;
   
@@ -396,6 +396,9 @@ button:hover {
   }
   .logo {
     margin-bottom: 10px;
+  }
+  section img {
+    height: 180px;
   }
 
   main {

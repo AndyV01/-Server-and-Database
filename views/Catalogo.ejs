@@ -45,11 +45,19 @@
         <section>
             <h1 class="neon">__________________________________________ SEMILLAS FEMINIZADAS
                 __________________________________________</h1>
-            <Div id="product_container"></Div>
+            <Div id="product_container">
+                <% listOfProducts.forEach(producto => { %>
+                    <div id="product">
+                        <h2><%=producto.name%></h2>
+                        <img alt="<%= producto.image %>" src="<%=producto.image%>" />
+                        <p><%=producto.price%></p>
+                        <a href="<%=producto.link%>">comprar</a>
+                    </div>
+                <% }); %>
+            </Div>
         </section>
     </main>
     <%- include ('footer'); %>
-    <script src="./Catalogo.js"></script>
 </body>
 
 </html>

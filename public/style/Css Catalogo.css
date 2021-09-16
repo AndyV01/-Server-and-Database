@@ -181,7 +181,7 @@ section img:hover {
 h2 {
   font-family: 'Big Shoulders Stencil Display', cursive;
 }
-.product {
+#product {
   width: 220px;
   height: 300px;
   background-color: rgba(127, 255, 212, 0.281);

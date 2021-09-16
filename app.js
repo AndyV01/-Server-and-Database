@@ -72,16 +72,19 @@ app.post("/login", async function (req, res) {
         res.redirect("/")
         return
     }
-   
     res.render ("error_login")
 })
 
 app.get("/blog", function (req, res) {
-    res.render("home-blog")
+    res.render("home-blog",{
+        listOfLink
+    } )
 })
 
 app.get("/catalogo", function (req, res) {
-    res.render("Catalogo")
+    res.render("Catalogo", { 
+        listOfProducts
+    } )
 })
 
 //renderizacion de vistas de productos por Id

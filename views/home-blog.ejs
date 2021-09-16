@@ -57,6 +57,11 @@
                 allowfullscreen></iframe>
         </section>
         <aside>
+            <% listOfLink.forEach(noticia => { %>
+                <div class="newLink">
+                    <a href="<%=noticia.link%>"><%=noticia.name%></a>
+                </div>
+            <% }); %>
         </aside>
         <article>
             <h1 class="neon">__________________________________________ N O V E D A D E S
@@ -78,7 +83,6 @@
         </article>
     </main>
     <%- include ('footer'); %>
-    <script src="/JavaBlog.js"></script>
 </body>
 
 </html>

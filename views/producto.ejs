@@ -44,14 +44,14 @@
     <main>
         <section>
             <div>
-                <img src="<%= image %>" alt="product">
+                <img src="<%= elProducto.route %>" alt="product">
             </div>
             <div>
                 <h1>
-                    <%= name %>
+                    <%= elProducto.name_p %>
                 </h1>
                 <p>
-                    <%= description %>
+                    <%= elProducto.description %>
                 </p>
                 <div class="description">
                     <label>
@@ -66,7 +66,7 @@
                         <input type="checkbox">
                         Pack 9 Semillas $4100
                     </label>
-                    <button>COMPRAR</button>
+                    <a href="/blog"> <input type="button" value="COMPRAR"></a>
                 </div>
             </div>
         </section>

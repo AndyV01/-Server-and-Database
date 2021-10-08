@@ -48,10 +48,10 @@
             <Div id="product_container">
                 <% listOfProducts.forEach(producto => { %>
                     <div id="product">
-                        <h2><%=producto.name%></h2>
-                        <img alt="<%= producto.image %>" src="<%=producto.image%>" />
+                        <h2><%=producto.name_p%></h2>
+                        <img alt="<%= producto %>" src="<%=producto.route%>" />
                         <p><%=producto.price%></p>
-                        <a href="<%=producto.link%>">comprar</a>
+                        <a href="<%=producto.link_p%>">comprar</a>
                     </div>
                 <% }); %>
             </Div>

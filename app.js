@@ -1,53 +1,28 @@
 const express = require("express")
-
 const path = require('path')
-
 const app = express()
-
 const bcrypt = require('bcrypt')
 
 app.set("view engine", "ejs")
 
-const listOfProducts = require("./public/data/listofProducts")
-
-const listOfLink = require("./public/data/listofLink")
-
-const users = require("./public/data/users")
-
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
-}));
+})); 
+ 
+const { sequelize } = require("./db")
+
+require('dotenv').config()
+
+const { router: blogRouter } = require('./routes/blog')
+const { router: catalogoRouter } = require('./routes/catalogo')
+const { router: productoRouter } = require('./routes/producto')
+const { router: suscribeRouter } = require('./routes/suscribe')
 
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get("/", function (req, res) {
     res.render("home")
-})
-
-//formulario de inscripcion
-app.post("/suscribe", async function (req, res) {
-    const id = users.length + 1
-    const name = req.body.name
-    const email = req.body.email
-    let password = req.body.password
-    password = await bcrypt.hash(req.body.password, 10)
-    const newUser = {
-        id,
-        name,
-        email,
-        password
-    }
-    if (newUser.name && newUser.email && newUser.password) {
-        users.push(newUser)
-        res.redirect("suscripto_ok")
-    } else {
-        const response = {
-            "error": "Debes completar los campos name y mail"
-        }
-        res.status(400)
-        res.send(response)
-    }
 })
 
 app.get("/suscripto_ok", function (req, res) {
@@ -60,7 +35,7 @@ app.post("/login", async function (req, res) {
     let usuarioObj = null
     let resultado = false
 
-    users.forEach(function (usr) {
+    user.forEach(function (usr) {
         if (usr.email === usuario) {
             usuarioObj = usr
         }
@@ -75,37 +50,32 @@ app.post("/login", async function (req, res) {
     res.render ("error_login")
 })
 
-app.get("/blog", function (req, res) {
-    res.render("home-blog",{
-        listOfLink
-    } )
-})
+app.use('/producto', productoRouter)
+app.use('/blog', blogRouter)
+app.use('/catalogo', catalogoRouter)
+app.use('/suscribe', suscribeRouter)
 
-app.get("/catalogo", function (req, res) {
-    res.render("Catalogo", { 
-        listOfProducts
-    } )
-})
+const PORT = 4000;
 
-//renderizacion de vistas de productos por Id
-app.get("/producto/:id", function (req, res) {
-    const id = parseInt(req.params.id)
-    const elProducto = listOfProducts.find(function (producto) {
-        return producto.id === id
-    })
-    res.render("producto", elProducto)
-})
+// Test DB connection
+sequelize.authenticate()
+  .then(() => {
+    console.log('Database connected...');
+  })
+  .catch((error) => {
+    console.log('Error connecting Sequelize:', error);
+  });
 
-//renderizacion de vistas del Blog por Id de noticia
-app.get("/blog/:id", function (req, res) {
-    const id = parseInt(req.params.id)
-    const laNoticia = listOfLink.find(function (noticia) {
-        return noticia.id === id
-    })
-    res.render("blog", laNoticia)
-})
+app.listen(PORT, async () => {
+  console.log(`Server listening at port ${PORT}`);  
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
 
-const port = 4000;
-const server = app.listen(port, () => {
-    console.log(`Express running → PORT ${server.address().port}`);
+    await sequelize.sync({ alter: true });
+    console.log("All models were synchronized successfully.");
+
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
 });

@@ -1,14 +1,20 @@
-const express = require('express');
+const express = require('express')
 
-const router = express.Router();
+const router = express.Router()
 
 const Products = require('../models/product')
 
 router.get("/", async function (req, res) {
+    try{
     const listOfProducts = await Products.findAll()
-    res.render("Catalogo", { 
-        listOfProducts
+    return res.json( { 
+        success: true, list: listOfProducts
     } )
+} catch(exception) {
+    return res.json({ 
+      success: false, error: exception
+    })
+  }
 })
 module.exports = {
     router: router

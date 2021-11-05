@@ -1,9 +1,10 @@
-const express = require('express');
+const express = require('express')
 const bcrypt = require('bcrypt')
 
-const router = express.Router();
+const router = express.Router()
 
 const Users = require('../models/user')
+
 
 //formulario de inscripcion
 router.post("/", async function (req, res) {
@@ -16,16 +17,16 @@ router.post("/", async function (req, res) {
         email,
         password
     }
-    console.log (newUser)
+    console.log(newUser)
     if (newUser.name && newUser.email && newUser.password) {
         const user = await Users.create({
             name_u: name,
             email,
             password
           })
-        
-        res.redirect("suscripto_ok")  
-        return
+        return res.json({
+            sucsses: true,
+        })
     } else {
         const response = {
             "error": "Debes completar los campos name y mail"
@@ -33,6 +34,7 @@ router.post("/", async function (req, res) {
         res.status(400)
         res.send(response)
     }
+    console.log(user)
 })
 module.exports = {
     router: router

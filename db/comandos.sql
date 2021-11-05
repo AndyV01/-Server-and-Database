@@ -28,6 +28,5 @@ CREATE TABLE orders (
 	id_users BIGINT REFERENCES users (id),
 	id_product BIGINT REFERENCES products (id),
 	adress VARCHAR (150) NOT NULL,
-	data DATA NOT NULL, 
 	UNIQUE (id_users)
 );

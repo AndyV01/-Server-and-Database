@@ -11,20 +11,22 @@ router.post("/:id", async (req, res) => {
    const usuarioRegistrado = await Users.findOne({ where: { email: email } })
    
    if(!usuarioRegistrado){
-       res.status(400).send({ message: "Usuario no esta Registrado"})
-   }
-
-   const order = await Order.create({
-       user_id: usuarioRegistrado.id,
-       product_id: productId,
-       adress
-   })
-    return res.json ({
-        sucsses: true,
+       return res.json({
+            succes: false
+       })
+   } else {
+    const order = await Order.create({
+        user_id: usuarioRegistrado.id,
+        product_id: productId,
+        adress
     })
-} catch (exception){
+     return res.json ({
+         succes: true
+     })
+   }
+} catch (error){
     return res.json({
-        error: exception
+        error
     })
 }
 })

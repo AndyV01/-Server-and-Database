@@ -25,7 +25,7 @@ router.post("/", async function (req, res) {
             password
           })
         return res.json({
-            sucsses: true,
+            succes: true,
         })
     } else {
         const response = {
@@ -34,7 +34,7 @@ router.post("/", async function (req, res) {
         res.status(400)
         res.send(response)
     }
-    console.log(user)
+
 })
 module.exports = {
     router: router

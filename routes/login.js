@@ -16,11 +16,12 @@ router.post("/", async function (req, res) {
     }
     if (resultado) {
         return res.json ({
-            sucsses: true, 
+            success: true, 
         })
     }
-    console.log(resultado)
-    res.render ("error_login")
+    return res.json({
+        success: false,
+    })
 })  
 
 module.exports = {

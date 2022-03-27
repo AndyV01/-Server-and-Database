@@ -27,6 +27,7 @@ router.post("/", async function (req, res) {
         return res.json({
             succes: true,
         })
+    
     } else {
         const response = {
             "error": "Debes completar los campos name y mail"

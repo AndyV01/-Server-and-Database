@@ -11,11 +11,11 @@ router.post("/", async function (req, res) {
     const { email, password } = req.body
     let resultado = false
     const usuarioObj = await Users.findOne({ where: { email: email } })
-
+    
     if (usuarioObj !== null) {
         resultado = await bcrypt.compare(password, usuarioObj.password)
     }
-
+     
     if (resultado) {
         return res.json({
             success: true,

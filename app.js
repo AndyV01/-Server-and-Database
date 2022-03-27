@@ -2,6 +2,8 @@ const express = require("express")
 const path = require('path')
 const app = express()
 const cors = require ('cors')
+const jwt = require('jsonwebtoken')
+
 
 app.use(cors())
 
@@ -11,7 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 })); 
- 
+
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -23,12 +26,14 @@ app.post('/api/status', function (req, res, next) {
     
 });
 
+
 module.exports = app;
 
 
 const { sequelize } = require("./db")
 
 require('dotenv').config()
+
 
 const { router: blogRouter } = require('./routes/blog')
 const { router: catalogoRouter } = require('./routes/catalogo')
@@ -39,6 +44,7 @@ const { router: orderRouter } = require('./routes/orders')
 
 app.use(express.static(path.join(__dirname, "public")))
 
+
 app.get("/", function (req, res) {
     res.render("home")
 })
@@ -46,6 +52,8 @@ app.get("/", function (req, res) {
 app.get("/suscripto_ok", function (req, res) {
     res.render("suscripto")
 })
+
+
 
 app.use('/producto', productoRouter)
 app.use('/blog', blogRouter)

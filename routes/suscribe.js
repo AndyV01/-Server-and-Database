@@ -17,7 +17,7 @@ router.post("/", async function (req, res) {
         email,
         password
     }
-    console.log(newUser)
+    
     if (newUser.name && newUser.email && newUser.password) {
         const user = await Users.create({
             name_u: name,

@@ -62,7 +62,7 @@ app.use('/suscribe', suscribeRouter)
 app.use('/login', loginRouter)
 app.use('/order', orderRouter)
 
-const PORT = 4000;  
+const PORT = 3000;  
 
 // Test DB connection
 sequelize.authenticate()

@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const News = require('../models/New')
+const News = require('../models/new')
 
 //renderizacion de vistas del Blog por Id de noticia
 router.get("/:id", async function (req, res) {

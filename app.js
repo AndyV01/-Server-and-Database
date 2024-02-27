@@ -74,7 +74,7 @@ sequelize.authenticate()
   });
 
 
-app.listen( process.env.PORT || PORT, async () => {
+app.listen(process.env.PORT || PORT, async () => {
   console.log(`Server listening at port ${PORT}`);  
   try {
     await sequelize.authenticate();

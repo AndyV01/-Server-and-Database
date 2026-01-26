@@ -62,7 +62,7 @@ app.use('/suscribe', suscribeRouter)
 app.use('/login', loginRouter)
 app.use('/order', orderRouter)
 
-const PORT = 4000;  
+const PORT = 3000;  
 
 // Test DB connection
 sequelize.authenticate()
@@ -73,7 +73,8 @@ sequelize.authenticate()
     console.log('Error connecting Sequelize:', error);
   });
 
-app.listen(PORT, async () => {
+
+app.listen(process.env.PORT || PORT, async () => {
   console.log(`Server listening at port ${PORT}`);  
   try {
     await sequelize.authenticate();
